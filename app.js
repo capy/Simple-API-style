@@ -22,7 +22,6 @@ fs.readdirSync(routePath).forEach(function (file) {
     require(routePath + file)(app);
 });
 
-
 http.createServer(app).listen(app.get('port'), function () {
     console.log("http://localhost:" + app.get('port'));
 });
